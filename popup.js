@@ -691,7 +691,7 @@ function showSettings() {
 
 
   chrome.storage.local.get(['endtest_ignore_classes'], function(ignore_classes) {
-    if (ignore_classes) {
+    if (ignore_classes.endtest_ignore_classes) {
       classes_to_ignore = ignore_classes.endtest_ignore_classes;
       if (classes_to_ignore) {
         document.getElementById("blacklist_classes").value = classes_to_ignore;

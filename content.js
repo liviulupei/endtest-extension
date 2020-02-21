@@ -527,7 +527,7 @@ chrome.storage.local.get(['endtest_extension_currently_recording'], function(the
     if (the_recording_cookie == 1) {
 
       chrome.storage.local.get(['endtest_ignore_classes'], function(ignore_classes) {
-        if (ignore_classes) {
+        if (ignore_classes.endtest_ignore_classes) {
           classes_to_ignore = ignore_classes.endtest_ignore_classes;
           classes_to_ignore = classes_to_ignore.replace(/\s/g, '');
           if (classes_to_ignore) {
@@ -816,7 +816,6 @@ chrome.storage.local.get(['endtest_extension_currently_recording'], function(the
           }
 
           if (e.keyCode == 40 || e.keyCode == 38 || e.keyCode == 37 || e.keyCode == 39) {
-            alert("aloha");
             found_it = 0;
             e.stopPropagation();
 
