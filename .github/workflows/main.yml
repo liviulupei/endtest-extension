@@ -31,7 +31,7 @@ jobs:
         with:
           app-id: '85205402'
           app-code: '79973826'
-          api-request: 'https://endtest.io/api.php?action=runTestSuite&appId=85205402&appCode=79973826&testSuite=106877&selectedPlatform=windows&selectedOs=a&selectedBrowser=chrome&selectedResolution=d&selectedLocation=sanfrancisco&selectedCases=491130&writtenAdditionalNotes='
+          api-request: "https://endtest.io/api.php?action=runTestSuite&appId=85205402&appCode=79973826&testSuite=106877&selectedPlatform=windows&selectedOs=a&selectedBrowser=chrome&selectedResolution=d&selectedLocation=sanfrancisco&selectedCases=491130&writtenAdditionalNotes="
           number-of-loops: 6
 
       # Runs a set of commands using the runners shell
