@@ -31,7 +31,7 @@ jobs:
         with:
           app-id: '85205402'
           app-code: '79973826'
-          api-request: "https://endtest.io/api.php"
+          api-request: 'https://endtest.io/api.php'
           number-of-loops: 6
 
       # Runs a set of commands using the runners shell
