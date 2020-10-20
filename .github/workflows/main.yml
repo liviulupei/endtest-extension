@@ -28,12 +28,15 @@ jobs:
         
       - name: Run Endtest functional tests
         id: run_endtest_functional_tests
-        uses: endtest-technologies/github-run-tests-action@v1.2.9.4
+        uses: endtest-technologies/github-run-tests-action@v1.2.9.5
         with:
           app_id: "85205402"
           app_code: "79973826"
           api_request: "https://endtest.io/api.php?action=runTestSuite&appId=85205402&appCode=79973826&testSuite=106877&selectedPlatform=windows&selectedOs=a&selectedBrowser=chrome&selectedResolution=d&selectedLocation=sanfrancisco&selectedCases=491130&writtenAdditionalNotes="
           number_of_loops: 6
+          
+      - name: Just echo anything
+        run: echo "hello"
           
       - name: Check the test suite name output
         run: echo "${{ steps.run_endtest_functional_tests.outputs.test_suite_name }}"
