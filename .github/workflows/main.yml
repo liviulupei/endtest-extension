@@ -27,7 +27,7 @@ jobs:
         run: echo Hello, world!
         
       - name: Run Endtest functional tests
-        uses: endtest-technologies/github-run-tests-action@v1.2.3
+        uses: endtest-technologies/github-run-tests-action@v1.2.2
         with:
           app-id: "85205402"
           app-code: "79973826"
