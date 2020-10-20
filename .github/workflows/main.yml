@@ -37,6 +37,13 @@ jobs:
           
       - name: Just echo anything
         run: echo "hello"
+        
+      - name: Set selected color
+        run: echo '::set-output name=SELECTED_SAMPLE::green'
+        id: random-color-generator
+        
+      - name: Get color
+        run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_SAMPLE }}"
           
       - name: Check the test suite name output
         run: echo "${{ steps.run_endtest_functional_tests.outputs.test_suite_name }}"
