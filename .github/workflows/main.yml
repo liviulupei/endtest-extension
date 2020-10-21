@@ -28,7 +28,7 @@ jobs:
         
       - name: Run Endtest functional tests
         id: run_endtest_functional_tests
-        uses: endtest-technologies/github-run-tests-action@v1.2.9.8
+        uses: endtest-technologies/github-run-tests-action@v1.2.9.9
         with:
           app_id: "85205402"
           app_code: "79973826"
@@ -44,13 +44,12 @@ jobs:
         
       - name: Get color
         run: echo "The selected color is ${{ steps.random-color-generator.outputs.SELECTED_SAMPLE }}"
-      
-      - name: Check the hardcoded output
-        run: echo "${{ steps.run_endtest_functional_tests.outputs.SELECTED_COLOR }}"
-          
-      - name: Check the test suite name output
-        run: echo "${{ steps.run_endtest_functional_tests.outputs.test_suite_name }}"
+    
         
+      - name: Check the test suite name output
+        run: echo "${{ steps.run_endtest_functional_tests.outputs.test_suite_name }} attack"
+      - name: Check the configuration output
+        run: echo "${{ steps.run_endtest_functional_tests.outputs.configuration }} attack"
 
         
       # Runs a set of commands using the runners shell
