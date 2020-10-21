@@ -24,10 +24,10 @@ jobs:
           number_of_loops: 6
           
       - name: Get the test suite name output
-        run: echo "${{ echo steps.endtest_functional_tests.outputs.test_suite_name }}"
+        run: echo "${{ steps.endtest_functional_tests.outputs.test_suite_name }}"
         
       - name: Get the test suite name output1
-        run: echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
+        run: echo "${{ steps.endtest_functional_tests.outputs.werner }}"
       
         
       - name: Get the configuration output
