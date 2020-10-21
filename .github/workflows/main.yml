@@ -16,7 +16,7 @@ jobs:
         
       - name: Run Endtest functional tests
         id: endtest_functional_tests
-        uses: endtest-technologies/github-run-tests-action@v1.3.0.1.1
+        uses: endtest-technologies/github-run-tests-action@v1.3.0.1.2
         with:
           app_id: "85205402"
           app_code: "79973826"
@@ -24,7 +24,7 @@ jobs:
           number_of_loops: 6
           
       - name: Get the test suite name output
-        run: echo "${{ steps.endtest_functional_tests.outputs.test_suite_name }}"
+        run: echo "${{ echo steps.endtest_functional_tests.outputs.test_suite_name }}"
         
       - name: Get the test suite name output1
         run: echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
