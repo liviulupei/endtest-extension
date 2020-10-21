@@ -16,7 +16,7 @@ jobs:
         
       - name: Run Endtest functional tests
         id: endtest_functional_tests
-        uses: endtest-technologies/github-run-tests-action@v1.3.0.1.5
+        uses: endtest-technologies/github-run-tests-action@v1.3.0.1.6
         with:
           app_id: "85205402"
           app_code: "79973826"
@@ -24,16 +24,18 @@ jobs:
           number_of_loops: 6
           
       - name: Get the test suite name output
-        run: echo "${{ steps.endtest_functional_tests.outputs.test_suite_name }}"
+        run: echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
         
 
       - name: Get the configuration output
-        run: echo "${{ steps.endtest_functional_tests.outputs.configuration }}"
+        run: echo ${{ steps.endtest_functional_tests.outputs.configuration }}
 
       
       - name: Get multiple outputs
         run: |
           echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
-          echo "${{ steps.endtest_functional_tests.outputs.configuration }}"
-          echo "${{ steps.endtest_functional_tests.outputs.hash }}"
-          echo "${{ steps.endtest_functional_tests.outputs.results }}"
+          echo ${{ steps.endtest_functional_tests.outputs.configuration }}
+          echo ${{ steps.endtest_functional_tests.outputs.hash }}
+          echo ${{ steps.endtest_functional_tests.outputs.results }}
+          echo ${{ steps.endtest_functional_tests.outputs.detailed_logs }}
+          echo ${{ steps.endtest_functional_tests.outputs.screenshots_and_video }}
