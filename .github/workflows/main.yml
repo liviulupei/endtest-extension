@@ -16,7 +16,7 @@ jobs:
         
       - name: Run Endtest functional tests
         id: endtest_functional_tests
-        uses: endtest-technologies/github-run-tests-action@v1.3.0.0.7
+        uses: endtest-technologies/github-run-tests-action@v1.3.0.0.8
         with:
           app_id: "85205402"
           app_code: "79973826"
