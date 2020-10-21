@@ -33,7 +33,7 @@ jobs:
       
       - name: Get multiple outputs
         run: |
-          echo "${{ steps.endtest_functional_tests.outputs.test_suite_name }}"
+          echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
           echo "${{ steps.endtest_functional_tests.outputs.configuration }}"
           echo "${{ steps.endtest_functional_tests.outputs.hash }}"
           echo "${{ steps.endtest_functional_tests.outputs.results }}"
