@@ -1,4 +1,4 @@
-name: CI
+vname: CI
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
         
       - name: Run Endtest functional tests
         id: endtest_functional_tests
-        uses: endtest-technologies/github-run-tests-action@v1.3.0.1.0
+        uses: endtest-technologies/github-run-tests-action@v1.3.0.1.1
         with:
           app_id: "85205402"
           app_code: "79973826"
