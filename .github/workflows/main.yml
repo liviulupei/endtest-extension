@@ -30,7 +30,7 @@ jobs:
         run: echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
         
       - name: Get the test suite name output2
-        run: echo ${{ echo steps.endtest_functional_tests.outputs.test_suite_name }}
+        run: echo ${{ steps.endtest_functional_tests.outputs.test_suite_name }}
         
       - name: Get the configuration output
         run: echo "${{ steps.endtest_functional_tests.outputs.configuration }}"
