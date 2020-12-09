@@ -13,7 +13,6 @@ jobs:
       - uses: actions/checkout@v2
       - name: Run a one-line script
         run: echo Hello, world!
-        
       - name: Run Endtest functional tests
         id: endtest_functional_tests
         uses: endtest-technologies/github-run-tests-action@v1.5
